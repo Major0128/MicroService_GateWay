@@ -1,0 +1,24 @@
+server:
+  port: 8995
+security:
+  basic:
+    enabled: false
+
+zuul:
+  routes:
+    MicroServiceDemo-Client4:
+      path: /MICROSERVICEDEMO-CLIENT4/**
+      service-id: MICROSERVICEDEMO-CLIENT4
+    MicroServiceDemo-Client5:
+      path: /MICROSERVICEDEMO-CLIENT5/**
+      serviceId: MICROSERVICEDEMO-CLIENT5
+    baidu:
+      path: /baidu/**
+      url: http://www.baidu.com
+    publish:
+      path: /publish/**
+      serviceId: PUBLISHERDEMO
+spring:
+  application:
+    name: microservice-gateway-zuul
+
