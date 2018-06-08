@@ -8,10 +8,12 @@ zuul:
   routes:
     MicroServiceDemo-Client4:
       path: /MICROSERVICEDEMO-CLIENT4/**
-      service-id: MICROSERVICEDEMO-CLIENT4
+      serviceId: MICROSERVICEDEMO-CLIENT4
+      stripPrefix: true
     MicroServiceDemo-Client5:
       path: /MICROSERVICEDEMO-CLIENT5/**
       serviceId: MICROSERVICEDEMO-CLIENT5
+      stripPrefix: true
     baidu:
       path: /baidu/**
       url: http://www.baidu.com
